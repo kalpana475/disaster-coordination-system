@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Disaster Coordination System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🚨 Disaster Coordination System</h1>
+    <p>Emergency Resource & Rescue Management</p>
+  </header>
+
+  <main>
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+      <div class="card">
+        <h3>Active Disasters</h3>
+        <p id="disasterCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Rescue Teams</h3>
+        <p id="teamCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Medical Kits</h3>
+        <p id="medicalKits">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Ambulances</h3>
+        <p id="ambulances">0</p>
+      </div>
+
+    </section>
+
+
+    <!-- Report Disaster -->
+
+    <section class="panel">
+
+      <h2>Report New Disaster</h2>
+
+      <form id="disasterForm">
+
+        <input
+          type="text"
+          id="type"
+          placeholder="Disaster Type (Flood, Fire...)"
+          required
+        >
+
+        <input
+          type="text"
+          id="location"
+          placeholder="Location"
+          required
+        >
+
+        <select id="severity" required>
+          <option value="">Select Severity</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <input
+          type="number"
+          id="affectedPeople"
+          placeholder="People Affected"
+          required
+        >
+
+        <button type="submit">
+          Report Disaster
+        </button>
+
+      </form>
+
+      <p id="formMessage"></p>
+
+    </section>
+
+
+    <!-- Disaster List -->
+
+    <section class="panel">
+
+      <h2>Active Disasters</h2>
+
+      <div id="disasterList"></div>
+
+    </section>
+
+
+    <!-- Rescue Teams -->
+
+    <section class="panel">
+
+      <h2>Rescue Teams</h2>
+
+      <div id="teamList"></div>
+
+    </section>
+
+
+    <!-- Resources -->
+
+    <section class="panel">
+
+      <h2>Emergency Resources</h2>
+
+      <div id="resourceList"></div>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
